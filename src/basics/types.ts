@@ -45,6 +45,7 @@ export function countElementsInAnArrayOfUnknown(
   array: unknown[],
 ) /** Return type ? */ {
   // Write your code here
+  return array.length
 }
 
 /**
