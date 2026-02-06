@@ -29,13 +29,15 @@ export function addingStringsWithTypes(
  * - The correct return type
  */
 export function addTheRequiredTypes(
+  user: string,
+  age: number,
 ) /** Return type ? */ {
   // The purpose of this function is not important, you just have to complete the types
   return user.length * age;
 }
 
 /**
- * For the next function, we want tou count the number of elements in an array.
+ * For the next function, we want to count the number of elements in an array.
  * The user must give and array as parameter, but the type in the array is not important
  * You can deduce the return type of the function
  */
