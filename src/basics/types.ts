@@ -9,6 +9,10 @@
  * RUN tests for this file : `deno test src/basics/types_test.ts`
  */
 
+import { hrtime } from "node:process";
+import { setHeapSnapshotNearHeapLimit } from "node:v8";
+import { workerData } from "node:worker_threads";
+
 /**
  * As you can see in the function below, functions in Typescript can now have types.
  * The syntax for adding types is similar to Rust or Java. Se the example function below.
@@ -45,7 +49,7 @@ export function countElementsInAnArrayOfUnknown(
   array: unknown[],
 ) /** Return type ? */ {
   // Write your code here
-  return array.length
+  return array.length;
 }
 
 /**
@@ -55,6 +59,9 @@ export function countElementsInAnArrayOfUnknown(
  *
  * Complete the types and write the logic
  */
-export function arrayOfStringsToArrayOfStringLength(array: string[]) {
+export function arrayOfStringsToArrayOfStringLength(array: string[]): number[] {
   // Write your code here
+  return array.map((word) => {
+    return word.length;
+  });
 }

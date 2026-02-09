@@ -1,4 +1,7 @@
 {
   "name": "ex-js",
-  "version": "2.2.8"
+  "version": "2.2.8",
+  "dependencies": {
+    "@types/node": "^25.2.2"
+  }
 }

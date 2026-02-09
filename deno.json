@@ -16,6 +16,7 @@
     "indentWidth": 2,
     "semiColons": true,
     "singleQuote": false,
+    "nodeModulesDir": "auto",
     "include": ["src/"]
   },
   "lock": {

@@ -9,7 +9,8 @@
     "jsr:@std/fs@^1.0.19": "1.0.19",
     "jsr:@std/internal@^1.0.10": "1.0.10",
     "jsr:@std/path@^1.1.1": "1.1.2",
-    "jsr:@std/testing@^1.0.15": "1.0.15"
+    "jsr:@std/testing@^1.0.15": "1.0.15",
+    "npm:@types/node@^25.2.2": "25.2.2"
   },
   "jsr": {
     "@std/assert@1.0.14": {
@@ -58,11 +59,27 @@
       ]
     }
   },
+  "npm": {
+    "@types/node@25.2.2": {
+      "integrity": "sha512-BkmoP5/FhRYek5izySdkOneRyXYN35I860MFAGupTdebyE66uZaR+bXLHq8k4DirE5DwQi3NuhvRU1jqTVwUrQ==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "undici-types@7.16.0": {
+      "integrity": "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw=="
+    }
+  },
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@^1.0.14",
       "jsr:@std/expect@^1.0.17",
       "jsr:@std/testing@^1.0.15"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@types/node@^25.2.2"
+      ]
+    }
   }
 }
