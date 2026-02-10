@@ -7,11 +7,17 @@
  * improve the autocomplete experience in your editor.
  */
 
+import { error } from "node:console";
+
 export function removeNumbersBelowThreshold(
   array: number[],
   threshold: number,
 ): number[] | [] {
   // Write your code here
+  const isBigEnough = (threshold: number) => {
+    return threshold < 3;
+  };
+  return array.filter(isBigEnough);
 }
 
 export function filterStringByLength(
