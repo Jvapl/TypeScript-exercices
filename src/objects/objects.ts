@@ -1,3 +1,5 @@
+import { lstat } from "node:fs";
+
 /**
  * With typescript, you can use types with javascript objects.
  *
@@ -26,6 +28,15 @@ export type User2 = {
  */
 export function returnObjects(): [User1, User2] {
   // Write your code here
+  const character: User1 = {
+    first_name: "toto",
+    last_name: "tutu",
+  };
+  const character2: User2 = {
+    first_name: "",
+    last_name: "",
+  };
+  return [character, character2];
 }
 
 /**
