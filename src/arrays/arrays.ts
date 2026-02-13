@@ -6,10 +6,6 @@
  * As you will see, TypeScript will considerably
  * improve the autocomplete experience in your editor.
  */
-
-import { error } from "node:console";
-import { isArrayBufferView } from "node:util/types";
-
 export function removeNumbersBelowThreshold(
   array: number[],
   threshold: number,

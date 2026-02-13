@@ -1,5 +1,3 @@
-import { lstat } from "node:fs";
-
 /**
  * With typescript, you can use types with javascript objects.
  *
