@@ -8,16 +8,15 @@
  */
 
 import { error } from "node:console";
+import { isArrayBufferView } from "node:util/types";
 
 export function removeNumbersBelowThreshold(
   array: number[],
   threshold: number,
 ): number[] | [] {
   // Write your code here
-  const isBigEnough = (threshold: number) => {
-    return threshold < 3;
-  };
-  return array.filter(isBigEnough);
+  const belowThresold: number[] = array.filter((num) => threshold <= num);
+  return belowThresold;
 }
 
 export function filterStringByLength(
@@ -26,12 +25,13 @@ export function filterStringByLength(
   maxLength: number,
 ): string[] | [] {
   // Write your code here
-  const wordFilter = array.filter((array) =>
-    array.length > maxLength || array.length < minLength
+  const wordFilter = array.filter((word) =>
+    word.length >= minLength && word.length <= maxLength
   );
   return wordFilter;
 }
 
 export function getOnlyTheLowercaseLettersOfTheString(string: string): string {
   // Write your code here
+  return string.replace(/[^a-z]/g, "");
 }
