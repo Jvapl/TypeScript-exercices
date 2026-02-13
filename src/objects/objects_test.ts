@@ -34,6 +34,6 @@ describe("YourDetailedUser", () => {
           zip: number;
         };
       }>
-    >(true);
+    >(false);
   });
 });
